@@ -20,7 +20,7 @@ header {
 }
 
 header .logo {
-    height: 40px; /* Ajuste o tamanho da logo conforme necessário */
+    height: 50px; /* Ajuste o tamanho da logo conforme necessário */
     margin-right: 10px; /* Espaçamento entre a logo e o nome */
 }
 
@@ -124,7 +124,6 @@ section ul li::before {
 .image-container img {
     mix-blend-mode: multiply; /* Aplica o modo de mistura multiplicar */
     background-color: black; /* Fundo preto para efeito */
-    height: 150px;
 }
 
 
