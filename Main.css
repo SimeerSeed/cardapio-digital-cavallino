@@ -19,9 +19,24 @@ header {
     color: #e6ba43; /* Amarelo */
 }
 
+header .logo {
+    height: 40px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-right: 10px; /* Espaçamento entre a logo e o nome */
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 header h1 {
     text-align: center;
-    font-family: "Bungee", sans-serif;
+    font-family: "Noto Serif", serif;
+    display: flex;
+    align-items: center; /* Alinha verticalmente o texto ao centro */
+    font-size: 24px; /* Tamanho do texto "Cavallino" */
+    color: #e6ba43; /* Cor do texto */
 }
 
 header nav ul {
@@ -65,7 +80,7 @@ section {
 section h2 {
     margin-bottom: 24px;
     color: #8F0606; /* Vermelho */
-    font-family: "Bungee", sans-serif;
+    font-family: "Noto Serif", serif;
     text-align: center;
 }
 
@@ -106,6 +121,12 @@ section ul li::before {
     flex: 1 1 45%;
     margin-bottom: 20px;
 }
+.image-container img {
+    mix-blend-mode: multiply; /* Aplica o modo de mistura multiplicar */
+    background-color: black; /* Fundo preto para efeito */
+    height: 150px;
+}
+
 
 /* Rodapé */
 footer {
