@@ -78,12 +78,17 @@ header nav ul li a:hover {
 }
 
 nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #8F0606;
     display: flex; /* Aplica o layout Flexbox ao container ul */
     flex-wrap: wrap; /* Permite que os itens (li) quebrem para a próxima linha se necessário */
     justify-content: space-around; /* Espaça os itens uniformemente ao longo do container */
 }
 
 nav ul li {
+    position: relative; /* Necessário para o dropdown */
     list-style: none; /* Remove as marcas de lista padrão (bolinhas, números, etc.) */
     margin: 10px; /* Adiciona margem ao redor de cada item da lista para espaçamento */
 }
@@ -91,18 +96,50 @@ nav ul li {
 nav ul li a {
     display: block; /* Faz com que o link (a) se comporte como um bloco, ocupando toda a área disponível */
     padding: 10px 20px; /* Define o preenchimento interno do link, aumentando a área clicável */
-    background-color: #8B0000; /* Define a cor de fundo do link */
+    background-color: #8F0606; /* Define a cor de fundo do link */
     color: #FFD700; /* Define a cor do texto do link */
     text-decoration: none; /* Remove o sublinhado padrão dos links */
     text-align: center; /* Centraliza o texto dentro do link */
+    font-weight: bold;
     border-radius: 5px; /* Adiciona bordas arredondadas ao link */
     transition: background-color 0.3s; /* Adiciona uma transição suave de 0.3 segundos ao mudar a cor de fundo */
 }
 
 nav ul li a:hover {
-    background-color: #FF4500; /* Altera a cor de fundo do link ao passar o mouse por cima (efeito hover) */
+    background-color: #e6ba43; /* Altera a cor de fundo do link ao passar o mouse por cima (efeito hover) */
+    color: #8F0606;
 }
 
+/* Estilo para o dropdown */
+nav ul li .dropdown-content {
+    display: none; /* Esconde os links inicialmente */
+    position: absolute;
+    background-color: #8F0606;
+    min-width: 160px;
+    z-index: 1;
+    top: 100%; /* Coloca o menu suspenso abaixo do botão principal */
+}
+
+nav ul li .dropdown-content li {
+    border-bottom: 1px solid #e6ba43; /* Linha de separação entre os links */
+}
+
+nav ul li .dropdown-content li a {
+    padding: 12px 16px;
+    text-align: left;
+    color: #e6ba43;
+    background-color: #8F0606;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #e6ba43;
+    color: #8F0606;
+}
+
+/* Exibe o dropdown ao passar o mouse sobre o item */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
 
 /* Estilo das seções */
 section {
