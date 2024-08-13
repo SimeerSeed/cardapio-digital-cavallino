@@ -2,126 +2,137 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que padding e border não afetam a largura e altura dos elementos */
+    box-sizing: border-box;
 }
 
 body {
     font-family: "Platypi", serif;
     background-color: #faf3e0;
     background-image: url('midias/marble.jpg');
-    background-size: cover; /* Faz a imagem cobrir toda a tela */
-    background-position: center; /* Centraliza a imagem no fundo */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #333;
     line-height: 1.6;
 }
 
-
 /* Estilo do header */
 header {
-    padding: 16px; /* Espaçamento interno do cabeçalho */
-    background-color: #8F0606; /* Cor de fundo vermelha */
-    color: #e6ba43; /* Cor do texto em amarelo */
+    padding: 16px;
+    background-color: #8F0606;
+    color: #e6ba43;
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens do header */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    position: relative;
+}
+
+/* Container da logo */
+header .logo-container {
+    position: absolute; /* Permite que a logo fique centralizada mesmo com o menu */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta o deslocamento para centralizar a logo */
 }
 
 header .logo {
-    height: 75px; /* Altura da logo (ajustar conforme necessário) */
-    margin-right: 10px; /* Espaçamento entre a logo e o nome */
+    height: 75px;
 }
 
-header .container {
-    display: flex; /* Usa Flexbox para alinhamento */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    justify-content: space-between; /* Espaça o conteúdo de forma a preencher o espaço disponível */
-}
-
-header h1 {
-    text-align: center; /* Alinha o texto ao centro */
-    font-family: "Platypi", serif; /* Fonte serifada para o título */
-    display: flex; /* Usa Flexbox para alinhamento */
-    align-items: center; /* Alinha o texto verticalmente ao centro */
-    font-size: 24px; /* Tamanho do texto do título */
-    color: #ffffff; /* Cor do texto em amarelo */
+/* Menu na direita */
+header .menu-container {
+    position: absolute;
+    top: 0;
+    right: 0; /* Alinha o menu à direita */
+    margin-right: 20px;
 }
 
 header nav ul {
-    display: flex; /* Usa Flexbox para listar os itens de navegação */
-    justify-content: center; /* Centraliza os itens de navegação */
-    list-style: none; /* Remove os marcadores da lista */
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 header nav ul li {
-    margin: 0 10px; /* Espaçamento horizontal entre os itens de navegação */
+    margin: 0 10px;
 }
 
 header nav ul li a {
-    display: inline-block; /* Exibe os links como blocos inline */
-    padding: 10px 20px; /* Espaçamento interno dos links */
-    color: #e6ba43; /* Cor do texto em amarelo */
-    background-color: #8F0606; /* Cor de fundo vermelha */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    font-weight: bold; /* Negrito no texto dos links */
-    border-radius: 5px; /* Cantos arredondados */
-    transition: background-color 0.3s, color 0.3s; /* Transição suave para mudanças de cor */
+    display: inline-block;
+    padding: 10px 20px;
+    color: #e6ba43;
+    background-color: #8F0606;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header nav ul li a:hover {
-    background-color: #e6ba43; /* Cor de fundo amarela quando o mouse está sobre o link */
-    color: #8F0606; /* Cor do texto vermelha quando o mouse está sobre o link */
+    background-color: #e6ba43;
+    color: #8F0606;
 }
 
-/* Container principal */
+/* Outras regras CSS */
 .container {
-    max-width: 1200px; /* Largura máxima do container */
-    margin: 0 auto; /* Centraliza o container horizontalmente */
-    padding: 20px; /* Espaçamento interno do container */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
 }
 
+.social-links img {
+    height: 24px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/* Estilos para o menu de navegação */
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: #8F0606;
-    display: flex; /* Aplica o layout Flexbox ao container ul */
-    flex-wrap: wrap; /* Permite que os itens (li) quebrem para a próxima linha se necessário */
-    justify-content: space-around; /* Espaça os itens uniformemente ao longo do container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 nav ul li {
-    position: relative; /* Necessário para o dropdown */
-    list-style: none; /* Remove as marcas de lista padrão (bolinhas, números, etc.) */
-    margin: 10px; /* Adiciona margem ao redor de cada item da lista para espaçamento */
+    position: relative;
+    list-style: none;
+    margin: 10px;
 }
 
 nav ul li a {
-    display: block; /* Faz com que o link (a) se comporte como um bloco, ocupando toda a área disponível */
-    padding: 10px 20px; /* Define o preenchimento interno do link, aumentando a área clicável */
-    background-color: #8F0606; /* Define a cor de fundo do link */
-    color: #FFD700; /* Define a cor do texto do link */
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    text-align: center; /* Centraliza o texto dentro do link */
+    display: block;
+    padding: 10px 20px;
+    background-color: #8F0606;
+    color: #FFD700;
+    text-decoration: none;
+    text-align: center;
     font-weight: bold;
-    border-radius: 5px; /* Adiciona bordas arredondadas ao link */
-    transition: background-color 0.3s; /* Adiciona uma transição suave de 0.3 segundos ao mudar a cor de fundo */
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #e6ba43; /* Altera a cor de fundo do link ao passar o mouse por cima (efeito hover) */
+    background-color: #e6ba43;
     color: #8F0606;
 }
 
 /* Estilo para o dropdown */
 nav ul li .dropdown-content {
-    display: none; /* Esconde os links inicialmente */
-    position: absolute;
+    display: none;
+    position: relative;
     background-color: #8F0606;
     min-width: 160px;
     z-index: 1;
-    top: 100%; /* Coloca o menu suspenso abaixo do botão principal */
+    top: 100%;
 }
 
 nav ul li .dropdown-content li {
-    border-bottom: 1px solid #e6ba43; /* Linha de separação entre os links */
+    border-bottom: 1px solid #e6ba43;
 }
 
 nav ul li .dropdown-content li a {
@@ -136,72 +147,115 @@ nav ul li .dropdown-content li a:hover {
     color: #8F0606;
 }
 
-/* Exibe o dropdown ao passar o mouse sobre o item */
 nav ul li:hover .dropdown-content {
-    display: block;
+    display: list-item;
 }
 
 /* Estilo das seções */
 section {
-    margin-bottom: 40px; /* Espaçamento abaixo de cada seção */
+    margin-bottom: 40px;
 }
 
 section h2 {
-    margin-bottom: 24px; /* Espaçamento abaixo do título da seção */
-    color: #8F0606; /* Cor do texto em vermelho */
-    font-family: "Platypi", serif; /* Fonte serifada para os títulos das seções */
-    text-align: center; /* Centraliza o título da seção */
+    margin-bottom: 24px;
+    color: #8F0606;
+    font-family: "Platypi", serif;
+    text-align: center;
 }
 
 /* Estilo dos itens do cardápio */
 ul {
-    list-style-type: none; /* Remove os marcadores das listas */
-    padding-left: 0; /* Remove o padding à esquerda */
+    list-style-type: none;
+    padding-left: 0;
 }
 
 li {
-    font-size: 18px; /* Tamanho da fonte dos itens da lista */
-    color: #555; /* Cor do texto dos itens da lista */
-    margin-bottom: 12px; /* Espaçamento abaixo dos itens */
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 12px;
 }
 
 section ul li {
-    font-size: 20px; /* Tamanho da fonte dos itens do cardápio */
+    font-size: 20px;
     font-weight: bolder;
-    color: #333; /* Cor do texto dos itens do cardápio */
-    margin-bottom: 8px; /* Espaçamento abaixo dos itens do cardápio */
+    color: #333;
+    margin-bottom: 8px;
 }
 
 section ul li::before {
-    content: "•"; /* Adiciona um marcador antes de cada item */
-    color: #8F0606; /* Cor do marcador em vermelho */
-    font-size: 20px; /* Tamanho do marcador */
-    margin-right: 10px; /* Espaçamento entre o marcador e o texto */
-    vertical-align: middle; /* Alinha o marcador verticalmente com o texto */
+    content: "•";
+    color: #8F0606;
+    font-size: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 /* Estilo das listas de preços */
 .price-list {
-    display: flex; /* Usa Flexbox para organizar os itens de preço */
-    flex-wrap: wrap; /* Permite quebra de linha quando necessário */
-    justify-content: space-between; /* Espaça os itens igualmente */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .price-list div {
-    flex: 1 1 45%; /* Permite que os itens ocupem até 45% do espaço disponível */
-    margin-bottom: 20px; /* Espaçamento abaixo dos itens */
+    flex: 1 1 45%;
+    margin-bottom: 20px;
 }
 
-/* Rodapé */
+.price-list span {
+    font-weight: bold;
+    color: #8F0606;
+    font-size: 18px;
+}
+
+/* Estilo dos rodapés */
 footer {
-    background-color: #8F0606; /* Cor de fundo vermelha */
-    color: #e6ba43; /* Cor do texto em amarelo */
-    text-align: center; /* Centraliza o texto */
-    padding: 16px; /* Espaçamento interno do rodapé */
-    margin-top: 40px; /* Espaçamento acima do rodapé */
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #8F0606;
+    color: #e6ba43;
 }
 
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #e6ba43;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;}
+        flex-direction: column;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo-container {
+        margin-bottom: 10px;
+    }
+
+    header .menu-container {
+        margin-right: 0;
+    }
 }
