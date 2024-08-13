@@ -6,11 +6,16 @@
 }
 
 body {
-    font-family: "Platypi", serif; /* Fonte padrão para o corpo da página */
-    background-color: #fff; /* Cor de fundo branca */
-    color: #333; /* Cor do texto padrão */
-    line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+    font-family: "Platypi", serif;
+    background-color: #faf3e0;
+    background-image: url('midias/marble.jpg');
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    color: #333;
+    line-height: 1.6;
 }
+
 
 /* Estilo do header */
 header {
@@ -124,7 +129,8 @@ li {
 }
 
 section ul li {
-    font-size: 18px; /* Tamanho da fonte dos itens do cardápio */
+    font-size: 20px; /* Tamanho da fonte dos itens do cardápio */
+    font-weight: bolder;
     color: #333; /* Cor do texto dos itens do cardápio */
     margin-bottom: 8px; /* Espaçamento abaixo dos itens do cardápio */
 }
