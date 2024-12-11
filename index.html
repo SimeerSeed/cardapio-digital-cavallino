@@ -1,101 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!-- Define o tipo de documento como HTML5 -->
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a página para ser responsiva -->
-    <title>Cardápio Cavallino</title> <!-- Título da página, que aparece na aba do navegador -->
-    <!-- Link para o arquivo CSS externo -->
-    <link rel="stylesheet" href="Main.css"> <!-- Importa o arquivo de estilo CSS externo chamado "Main.css" -->
-    <!-- Pré-conexões para fontes Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Melhora o tempo de carregamento ao pré-conectar às fontes do Google -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Permite que as fontes sejam carregadas de forma segura -->
-    <!-- Link para fontes Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Cavallino</title>
+    <link rel="stylesheet" href="Main.css">
+    <script src="Main.js" defer></script>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
     <link rel="icon" href="./midias/icon_cavallino.png" type="image/png">
-
 </head>
 <body>
-    <!-- Cabeçalho da página -->
     <header>
         <div class="container">
-            <!-- Logo do site -->
             <div class="image-container">
-                <img class="logo" src="./midias/cavallino.png" alt="logo do Cavallino"> <!-- Exibe a logo do site -->
+                <img class="logo" src="./midias/cavallino.png" alt="Logo do Cavallino">
             </div>
-            <!-- Navegação principal -->
-    <!-- Navegação principal -->
-        <nav>
-        <ul>
-        <div class="menu-container"
-            <!-- Menu principal -->
-            <li class="dropdown">
-                <a href="#" class="dropbtn">☰</a>
-                <ul class="dropdown-content">
-                    <!-- Links de navegação para as diferentes seções do cardápio -->
-                    <li><a href="#executivos" class="nav-button">Pratos Executivos</a></li>
-                    <li><a href="#massas" class="nav-button">Massas</a></li>
-                    <li><a href="#picanha" class="nav-button">Picanha</a></li>
-                    <li><a href="#frango-atropelado" class="nav-button">Frango Atropelado</a></li>
-                    <li><a href="#filet-frango" class="nav-button">Filet de Frango</a></li>
-                    <li><a href="#contra-filet" class="nav-button">Contra Filet</a></li>
-                    <li><a href="#pizzas-salgadas" class="nav-button">Pizzas Salgadas</a></li>
-                    <li><a href="#pizzas-doces" class="nav-button">Pizzas Doces</a></li>
+            <nav>
+                <ul class="menu-container">
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">&#9776;</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#executivos" class="nav-button">Pratos Executivos</a></li>
+                            <li><a href="#massas" class="nav-button">Massas</a></li>
+                            <li><a href="#picanha" class="nav-button">Picanha</a></li>
+                            <li><a href="#frango-atropelado" class="nav-button">Frango Atropelado</a></li>
+                            <li><a href="#filet-frango" class="nav-button">Filet de Frango</a></li>
+                            <li><a href="#contra-filet" class="nav-button">Contra Filet</a></li>
+                            <li><a href="#pizzas-salgadas" class="nav-button">Pizzas Salgadas</a></li>
+                            <li><a href="#pizzas-doces" class="nav-button">Pizzas Doces</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
-    </nav>
+            </nav>
         </div>
     </header>
 
-    <!-- Seção de Pratos Executivos -->
-    <section id="executivos">
-        <div class="container">
-            <h2>Pratos Executivos</h2> <!-- Subtítulo para a seção de Pratos Executivos -->
-            <ul>
-                <!-- Lista de pratos executivos com preço -->
-                <li>Frango Atropelado - R$ 38,90</li>
-                    <p>Filet de coxa, arroz branco, batata frita, salada tradicional e feijão</p>
-                <li>Strogonoff de Frango - R$ 37,90</li>
-                    <p>Arroz branco e batata sauté</p>
-                <li>Strogonoff de Carne - R$ 39,90</li>
-                    <p>Arroz branco e batata sauté</p>
-                <li>Contra Filé - R$ 42,90</li>
-                    <p>Arroz branco, farofa e batata frita</p>
-                <li>Picanha - R$ 55,90</li>
-                    <p>Arroz branco, farofa e batata frita</p>
-                <li>Filé de Frango à Parmegiana - R$ 45,90</li>
-                    <p>Arroz branco e purê de batatas</p>
-                <li>Filé de Linguado - R$ 55,90</li>
-                    <p>Arroz brócolis, purê de batatas e molho de camarão</p>
-                <li>Risoto de Camarão - R$ 55,90</li>
-            </ul>
-            <p>*Consultar a taxa de entrega</p> <!-- Aviso sobre taxa de entrega -->
-        </div>
-    </section>
+    <main>
+        <section id="executivos">
+            <div class="container">
+                <h2>Pratos Executivos</h2>
+                <ul>
+                    <li><strong>Frango Atropelado</strong> - R$ 38,90
+                        <p>Filet de coxa, arroz branco, batata frita, salada tradicional e feijão</p>
+                    </li>
+                    <li><strong>Strogonoff de Frango</strong> - R$ 37,90
+                        <p>Arroz branco e batata sauté</p>
+                    </li>
+                    <li><strong>Strogonoff de Carne</strong> - R$ 39,90
+                        <p>Arroz branco e batata sauté</p>
+                    </li>
+                    <li><strong>Contra Filé</strong> - R$ 42,90
+                        <p>Arroz branco, farofa e batata frita</p>
+                    </li>
+                    <li><strong>Picanha</strong> - R$ 55,90
+                        <p>Arroz branco, farofa e batata frita</p>
+                    </li>
+                    <li><strong>Filé de Frango à Parmegiana</strong> - R$ 45,90
+                        <p>Arroz branco e purê de batatas</p>
+                    </li>
+                    <li><strong>Filé de Linguado</strong> - R$ 55,90
+                        <p>Arroz brócolis, purê de batatas e molho de camarão</p>
+                    </li>
+                    <li><strong>Risoto de Camarão</strong> - R$ 55,90</li>
+                </ul>
+                <p>*Consultar a taxa de entrega</p>
+            </div>
+        </section>
 
-    <!-- Seção de Massas -->
-    <section id="massas">
-        <div class="container">
-            <h2>Massas (Executivo)</h2> <!-- Subtítulo para a seção de Massas -->
-            <ul>
-                <!-- Lista de massas com preço -->
-                <li>Lasanha Bolonhesa - R$ 37,90</li>
-                <li>Lasanha de Frango - R$ 38,90</li>
-                <li>Lasanha Queijo com Presunto - R$ 42,90</li>
-                <li>Lasanha de Camarão - R$ 49,90</li>
-                <li>Nhoque ao Sugo - R$ 37,90</li>
-                <li>Nhoque à Bolonhesa - R$ 37,90</li>
-                <li>Nhoque Quatro Queijos - R$ 49,90</li>
-                <li>Nhoque de Camarão - R$ 49,90</li>
-                <li>Spaguetti à Bolonhesa - R$ 37,90</li>
-                <li>Spaguetti ao Sugo - R$ 37,90</li>
-                <li>Spaguetti Quatro Queijos - R$ 49,90</li>
-                <li>Spaguetti de Camarão - R$ 49,90</li>
-            </ul>
-            <p>*Consultar a taxa de entrega</p> <!-- Aviso sobre taxa de entrega -->
-        </div>
-    </section>
+        <section id="massas">
+            <div class="container">
+                <h2>Massas (Executivo)</h2>
+                <ul>
+                    <li><strong>Lasanha Bolonhesa</strong> - R$ 37,90</li>
+                    <li><strong>Lasanha de Frango</strong> - R$ 38,90</li>
+                    <li><strong>Lasanha Queijo com Presunto</strong> - R$ 42,90</li>
+                    <li><strong>Lasanha de Camarão</strong> - R$ 49,90</li>
+                    <li><strong>Nhoque ao Sugo</strong> - R$ 37,90</li>
+                    <li><strong>Nhoque à Bolonhesa</strong> - R$ 37,90</li>
+                    <li><strong>Nhoque Quatro Queijos</strong> - R$ 49,90</li>
+                    <li><strong>Nhoque de Camarão</strong> - R$ 49,90</li>
+                    <li><strong>Spaguetti à Bolonhesa</strong> - R$ 37,90</li>
+                    <li><strong>Spaguetti ao Sugo</strong> - R$ 37,90</li>
+                    <li><strong>Spaguetti Quatro Queijos</strong> - R$ 49,90</li>
+                    <li><strong>Spaguetti de Camarão</strong> - R$ 49,90</li>
+                </ul>
+                <p>*Consultar a taxa de entrega</p>
+            </div>
+        </section>
 
     <!-- Seção de Picanha -->
     <section id="picanha">
