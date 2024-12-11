@@ -198,9 +198,19 @@ footer p {
 /* Responsividade */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
-        display: none;
+        display: none; /* Oculta a navegação em telas pequenas */
     }
+
+    .card {
+        width: 100%; /* Faz os cards ocuparem 100% da largura */
+    }
+
+    .menu {
+        flex-direction: column; /* Alinha os itens do menu em coluna */
+    }
+}
+
+    /* Para telas pequenas, ajustar os cards para ocupar 100% da largura */
 
     nav ul.active {
         display: flex;
@@ -220,6 +230,40 @@ footer p {
         cursor: pointer;
     }
 
+    .menu {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens que não cabem na linha vão para a linha seguinte */
+        gap: 20px; /* Espaço entre os itens */
+        padding: 20px;
+        justify-content: space-between; /* Distribui os itens com espaçamento uniforme */
+    }
+
+    .card {
+        width: 200px; /* Ajuste a largura dos cards conforme necessário */
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease; /* Efeito de transição suave no hover */
+    }
+/* Efeito de hover nos cards */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo do título dos cards */
+.card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Para as categorias do menu (ex: Pratos Executivos, Massas, etc) */
+.category-header {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #9E9E9E;
+}    
     /* Ajustes para o header */
     header {
         flex-direction: column;
@@ -233,4 +277,3 @@ footer p {
     header .menu-container {
         margin-right: 0;
     }
-}
