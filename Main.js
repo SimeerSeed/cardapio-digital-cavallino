@@ -7,6 +7,7 @@ document.querySelectorAll('.dropbtn').forEach((btn) => {
     });
 });
 
+
 // Alertas para "Consultar a taxa de entrega"
 document.querySelectorAll('p').forEach((element) => {
     if (element.textContent.includes("Consultar a taxa de entrega")) {
