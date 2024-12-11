@@ -42,3 +42,11 @@ footer p {
     margin-top: 10px;
     font-size: 0.9em; /* Reduz o tamanho do texto */
 }
+
+/* Ajuste do tamanho do logo */
+.logo {
+    max-width: 150px; /* Defina um tamanho máximo */
+    height: auto; /* Mantém as proporções da imagem */
+    margin: 10px auto; /* Espaçamento para centralizar e dar espaço */
+    display: block; /* Garante centralização */
+}
